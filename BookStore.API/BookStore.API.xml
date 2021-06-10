@@ -1,0 +1,186 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BookStore.API</name>
+    </assembly>
+    <members>
+        <member name="M:BookStore.API.Controllers.AuthorController.Get(System.String)">
+            <summary>
+            Get authors with the given name or all author
+            </summary>
+            <param name="author">Author's name</param>
+            <returns>Returns a list of authors with the given name or all author</returns>
+            <response code="200">Listing successful</response>
+        </member>
+        <member name="M:BookStore.API.Controllers.AuthorController.Get(System.Int32)">
+            <summary>
+            Get a specific author with the given identifier
+            </summary>
+            <param name="id">Author's identifier</param>
+            <returns>Returns a specific author with the given identifier</returns>
+            <response code="200">Listing successful</response>
+        </member>
+        <member name="M:BookStore.API.Controllers.AuthorController.Post(BookStore.BLL.DTO.Author)">
+            <summary>
+            Create a new author with the given data
+            </summary>
+            <param name="author">The Author to create</param>
+            <returns>Returns the author inserted</returns>
+            <response code="200">Insert successful</response>
+        </member>
+        <member name="M:BookStore.API.Controllers.AuthorController.Put(System.Int32,BookStore.BLL.DTO.Author)">
+            <summary>
+            Update an author with the given data
+            </summary>
+            <param name="id">ID of the updated book</param>
+            <param name="author">The Author to update</param>
+            <returns>Returns no content</returns>
+            <response code="204">Update successful</response>
+        </member>
+        <member name="M:BookStore.API.Controllers.AuthorController.Delete(System.Int32)">
+            <summary>
+            Delete an author with the given ID
+            </summary>
+            <param name="id">The ID of the author to delete</param>
+            <returns>Returns no content</returns>
+            <response code="200">Delete successful</response>
+        </member>
+        <member name="M:BookStore.API.Controllers.BookController.Get(System.String)">
+            <summary>
+            Get books with the given title or all books
+            </summary>
+            <param name="book">Book's title</param>
+            <returns>Returns a list of books with the given title or all book</returns>
+            <response code="200">Listing successful</response>
+        </member>
+        <member name="M:BookStore.API.Controllers.BookController.Get(System.Int32)">
+            <summary>
+            Get a specific book with the given identifier
+            </summary>
+            <param name="id">Book's identifier</param>
+            <returns>Returns a specific book with the given identifier</returns>
+            <response code="200">Listing successful</response>
+        </member>
+        <member name="M:BookStore.API.Controllers.BookController.Post(BookStore.BLL.DTO.Book)">
+            <summary>
+            Create a new book with the given data
+            </summary>
+            <param name="book">The book to create</param>
+            <returns>Returns the book inserted</returns>
+            <response code="200">Insert successful</response>
+        </member>
+        <member name="M:BookStore.API.Controllers.BookController.Put(System.Int32,BookStore.BLL.DTO.Book)">
+            <summary>
+            Update a book with the given data
+            </summary>
+            <param name="id">ID of the updated book</param>
+            <param name="book">The book to update</param>
+            <returns>Returns no content</returns>
+            <response code="204">Update successful</response>
+        </member>
+        <member name="M:BookStore.API.Controllers.BookController.Delete(System.Int32)">
+            <summary>
+            Delete a book with the given ID
+            </summary>
+            <param name="id">The ID of the book to delete</param>
+            <returns>Returns no content</returns>
+            <response code="200">Delete successful</response>
+        </member>
+        <member name="M:BookStore.API.Controllers.BorrowController.Get(System.String,System.String)">
+            <summary>
+            Get borrowings with the given book and member or all borrowings
+            </summary>
+            <returns>Returns a list of borrowings</returns>
+            <response code="200">Listing successful</response>
+        </member>
+        <member name="M:BookStore.API.Controllers.BorrowController.Get">
+            <summary>
+            Get all active borrowings
+            </summary>
+            <returns>Returns a list of borrowings</returns>
+            <response code="200">Listing successful</response>
+        </member>
+        <member name="M:BookStore.API.Controllers.BorrowController.Get(System.Int32)">
+            <summary>
+            Get a specific borrowing with the given identifier
+            </summary>
+            <param name="id">Borrowing's identifier</param>
+            <returns>Returns a specific borrowing with the given identifier</returns>
+            <response code="200">Listing successful</response>
+        </member>
+        <member name="M:BookStore.API.Controllers.BorrowController.Post(BookStore.BLL.DTO.Borrowing)">
+            <summary>
+            Create a new borrowing with the given data
+            </summary>
+            <param name="borrowing">The Borrowing to create</param>
+            <returns>Returns the borrowing inserted</returns>
+            <response code="200">Insert successful</response>
+        </member>
+        <member name="M:BookStore.API.Controllers.BorrowController.Put(System.Int32,System.String)">
+            <summary>
+            Update a borrowings return date
+            </summary>
+            <param name="id">ID of the updated borrowing</param>
+            <param name="date">The date of the return</param>
+            <returns>Returns no content</returns>
+            <response code="200">Update returnDate successful</response>
+        </member>
+        <member name="M:BookStore.API.Controllers.BorrowController.Put(System.Int32,BookStore.BLL.DTO.Borrowing)">
+            <summary>
+            Update a borrowing with the given data
+            </summary>
+            <param name="id">ID of the updated borrowing</param>
+            <param name="borrowing">The borrowing to update</param>
+            <returns>Returns no content</returns>
+            <response code="200">Update successful</response>
+        </member>
+        <member name="M:BookStore.API.Controllers.BorrowController.Delete(System.Int32)">
+            <summary>
+            Delete a borrowing with the given ID
+            </summary>
+            <param name="id">The ID of the borrowing to delete</param>
+            <returns>Returns no content</returns>
+            <response code="200">Delete successful</response>
+        </member>
+        <member name="M:BookStore.API.Controllers.MemberController.Get(System.String)">
+            <summary>
+            Get members with given name or all members
+            </summary>
+            <returns>Returns a list of members</returns>
+            <response code="200">Listing successful</response>
+        </member>
+        <member name="M:BookStore.API.Controllers.MemberController.Get(System.Int32)">
+            <summary>
+            Get a specific member with the given identifier
+            </summary>
+            <param name="id">Member's identifier</param>
+            <returns>Returns a specific member with the given identifier</returns>
+            <response code="200">Listing successful</response>
+        </member>
+        <member name="M:BookStore.API.Controllers.MemberController.Post(BookStore.BLL.DTO.Member)">
+            <summary>
+            Create a new member with the given data
+            </summary>
+            <param name="member">The member to create</param>
+            <returns>Returns the member inserted</returns>
+            <response code="200">Insert successful</response>
+        </member>
+        <member name="M:BookStore.API.Controllers.MemberController.Put(System.Int32,BookStore.BLL.DTO.Member)">
+            <summary>
+            Update a member with the given data
+            </summary>
+            <param name="id">ID of the updated member</param>
+            <param name="member">The member to update</param>
+            <returns>Returns no content</returns>
+            <response code="204">Update successful</response>
+        </member>
+        <member name="M:BookStore.API.Controllers.MemberController.Delete(System.Int32)">
+            <summary>
+            Delete a member with the given ID
+            </summary>
+            <param name="id">The ID of the member to delete</param>
+            <returns>Returns no content</returns>
+            <response code="200">Delete successful</response>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,15 @@
+C:\work\BookStore\BookStore.DAL\bin\Release\net5.0\BookStore.DAL.deps.json
+C:\work\BookStore\BookStore.DAL\bin\Release\net5.0\BookStore.DAL.runtimeconfig.json
+C:\work\BookStore\BookStore.DAL\bin\Release\net5.0\BookStore.DAL.runtimeconfig.dev.json
+C:\work\BookStore\BookStore.DAL\bin\Release\net5.0\BookStore.DAL.dll
+C:\work\BookStore\BookStore.DAL\bin\Release\net5.0\ref\BookStore.DAL.dll
+C:\work\BookStore\BookStore.DAL\bin\Release\net5.0\BookStore.DAL.pdb
+C:\work\BookStore\BookStore.DAL\obj\Release\net5.0\BookStore.DAL.csprojAssemblyReference.cache
+C:\work\BookStore\BookStore.DAL\obj\Release\net5.0\BookStore.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\work\BookStore\BookStore.DAL\obj\Release\net5.0\BookStore.DAL.AssemblyInfoInputs.cache
+C:\work\BookStore\BookStore.DAL\obj\Release\net5.0\BookStore.DAL.AssemblyInfo.cs
+C:\work\BookStore\BookStore.DAL\obj\Release\net5.0\BookStore.DAL.csproj.CoreCompileInputs.cache
+C:\work\BookStore\BookStore.DAL\obj\Release\net5.0\BookStore.DAL.dll
+C:\work\BookStore\BookStore.DAL\obj\Release\net5.0\ref\BookStore.DAL.dll
+C:\work\BookStore\BookStore.DAL\obj\Release\net5.0\BookStore.DAL.pdb
+C:\work\BookStore\BookStore.DAL\obj\Release\net5.0\BookStore.DAL.genruntimeconfig.cache

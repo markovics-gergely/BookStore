@@ -1,0 +1,1 @@
+C:\work\BookStore\BookStore.CLIENT\BookStore.CLIENT.csproj;x86

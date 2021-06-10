@@ -1,0 +1,246 @@
+﻿<Page
+    x:Class="BookStore.CLIENT.Views.BookEditPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:BookStore.CLIENT.ViewModels.EditViewModels" 
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.DataContext>
+        <vm:BookEditViewModel x:Name="ViewModel" />
+    </Page.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Grid.Column="0"
+              BorderThickness="2" BorderBrush="Gray" Margin="5" CornerRadius="5" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch"
+                  Padding="10,0"
+                  Margin="5"
+                  BorderThickness="2"
+                  BorderBrush="#337ab7"
+                  CornerRadius="5">
+                <Grid Margin="0, 5, 0, 5">
+                    <TextBlock Text="Select Book"/>
+                </Grid>
+            </Grid>
+            <ComboBox Grid.Row="1" Grid.Column="0" ItemsSource="{Binding Books}"
+                      Padding="10,5"
+                      Margin="5"
+                      BorderThickness="2"
+                      BorderBrush="#337ab7"
+                      CornerRadius="5"
+                      HorizontalAlignment="Stretch"
+                      DisplayMemberPath="Title"
+                      SelectionChanged="ComboBox_SelectionChanged">
+            </ComboBox>
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="0" BorderThickness="2" BorderBrush="Gray" Margin="10,5,10,5"
+              VerticalAlignment="Stretch" CornerRadius="5" Background="#F0F0F0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Grid.Column="0"
+              BorderThickness="2" BorderBrush="Gray" Margin="5" CornerRadius="5" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch"
+                  Padding="10,0"
+                  Margin="5"
+                  BorderThickness="2"
+                  BorderBrush="#337ab7"
+                  CornerRadius="5">
+                    <Grid Margin="0, 5, 0, 5">
+                        <TextBlock Text="Title"/>
+                    </Grid>
+                </Grid>
+                <TextBox Grid.Row="1" Grid.Column="0" 
+                     Padding="10,5"
+                     Margin="5"
+                     BorderThickness="2"
+                     BorderBrush="#337ab7"
+                     CornerRadius="5"
+                     TextChanged="TextBox_TextChanged"
+                     Text="{Binding Book.Title, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="0"
+              BorderThickness="2" BorderBrush="Gray" Margin="5" CornerRadius="5" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch"
+                  Padding="10,0"
+                  Margin="5"
+                  BorderThickness="2"
+                  BorderBrush="#337ab7"
+                  CornerRadius="5">
+                    <Grid Margin="0, 5, 0, 5">
+                        <TextBlock Text="Author"/>
+                    </Grid>
+                </Grid>
+                <ComboBox Grid.Row="1" Grid.Column="0" 
+                      ItemsSource="{Binding Authors}"
+                      SelectedItem="{Binding SelectedAuthor, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                      IsSynchronizedWithCurrentItem="False"
+                      Padding="10,5"
+                      Margin="5"
+                      BorderThickness="2"
+                      BorderBrush="#337ab7"
+                      CornerRadius="5"
+                      HorizontalAlignment="Stretch"
+                      DisplayMemberPath="Name">
+                </ComboBox>
+            </Grid>
+            <Grid Grid.Row="2" Grid.Column="0"
+              BorderThickness="2" BorderBrush="Gray" Margin="5" CornerRadius="5" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch"
+                  Padding="10,0"
+                  Margin="5"
+                  BorderThickness="2"
+                  BorderBrush="#337ab7"
+                  CornerRadius="5">
+                    <Grid Margin="0, 5, 0, 5">
+                        <TextBlock Text="ISBN"/>
+                    </Grid>
+                </Grid>
+                <TextBox Grid.Row="1" Grid.Column="0" 
+                     Padding="10,5"
+                     Margin="5"
+                     BorderThickness="2"
+                     BorderBrush="#337ab7"
+                     CornerRadius="5"
+                     TextChanged="TextBox_TextChanged"
+                     Text="{Binding Book.Isbn, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            </Grid>
+            <Grid Grid.Row="3" Grid.Column="0"
+              BorderThickness="2" BorderBrush="Gray" Margin="5" CornerRadius="5" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch"
+                  Padding="10,0"
+                  Margin="5"
+                  BorderThickness="2"
+                  BorderBrush="#337ab7"
+                  CornerRadius="5">
+                    <Grid Margin="0, 5, 0, 5">
+                        <TextBlock Text="Published Year"/>
+                    </Grid>
+                </Grid>
+                <TextBox Grid.Row="1" Grid.Column="0" 
+                     Padding="10,5"
+                     Margin="5"
+                     BorderThickness="2"
+                     BorderBrush="#337ab7"
+                     CornerRadius="5"
+                     TextChanged="TextBox_TextChanged"
+                     Text="{Binding Book.PublishedYear, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            </Grid>
+            <Grid Grid.Row="4" Grid.Column="0"
+              BorderThickness="2" BorderBrush="Gray" Margin="5" CornerRadius="5" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch"
+                  Padding="10,0"
+                  Margin="5"
+                  BorderThickness="2"
+                  BorderBrush="#337ab7"
+                  CornerRadius="5">
+                    <Grid Margin="0, 5, 0, 5">
+                        <TextBlock Text="Subjects"/>
+                    </Grid>
+                </Grid>
+                <ComboBox Grid.Row="1" Grid.Column="0" 
+                      Padding="10,5"
+                      Margin="5"
+                      BorderThickness="2"
+                      BorderBrush="#337ab7"
+                      CornerRadius="5"
+                      HorizontalAlignment="Stretch">
+                    <ComboBox.Items>
+                        <ListView 
+                            Grid.Row="1" Grid.Column="0" 
+                            Padding="10,5"
+                            Margin="5"
+                            BorderThickness="2"
+                            BorderBrush="#337ab7"
+                            CornerRadius="5"
+                            HorizontalAlignment="Stretch"
+                            ItemsSource="{ Binding subjects, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                            SelectionMode="Multiple"
+                            SelectionChanged="ListView_SelectionChanged">
+                        </ListView>
+                    </ComboBox.Items>
+                </ComboBox>
+                
+            </Grid>
+            <Button Grid.Row="5" Grid.Column="0"
+                Content="Submit"
+                CornerRadius="5" VerticalAlignment="Stretch"
+                Margin="5" Padding="10,10,10,10" Background="#337ab7"
+                Foreground="White"
+                Command="{Binding SubmitCommand}"/>
+            <controls:InAppNotification
+                Grid.Row="3" Grid.Column="0"
+                x:Name="Notification"
+                VerticalAlignment="Bottom"
+                Background="#337ab7"
+                Foreground="White"
+                StackMode="Replace">
+                <TextBlock VerticalAlignment="Bottom" Text="Successfully Edited"/>
+            </controls:InAppNotification>
+        </Grid>
+    </Grid>
+    
+</Page>
