@@ -42,3 +42,8 @@ Lehet új tagokat, könyveket létrehozni, törölni vagy módosítani, és köz
    * a unit tesztekben a mock objektumok injektálása
    * sqlite (vagy in-memory sqlite) használata teszteléshez
 - külső komponens használata DTO-k inicializálására, AutoMapper
+
+## Képek
+
+![Swagger](https://github.com/markovics-gergely/BookStore/blob/main/pics/swagger.PNG)
+![Login](https://github.com/markovics-gergely/BookStore/blob/main/pics/login.PNG)
