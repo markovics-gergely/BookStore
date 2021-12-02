@@ -47,3 +47,5 @@ Lehet új tagokat, könyveket létrehozni, törölni vagy módosítani, és köz
 
 ![Swagger](https://github.com/markovics-gergely/BookStore/blob/main/pics/swagger.PNG)
 ![Login](https://github.com/markovics-gergely/BookStore/blob/main/pics/login.PNG)
+![Client](https://github.com/markovics-gergely/BookStore/blob/main/pics/clientempty.PNG)
+![ClientLoaded](https://github.com/markovics-gergely/BookStore/blob/main/pics/clientwithuser.PNG)
